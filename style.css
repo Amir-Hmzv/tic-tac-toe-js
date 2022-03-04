@@ -1,0 +1,132 @@
+body{
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: greenyellow;
+}
+
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(3,100px);
+    cursor: pointer;
+    position: relative;
+    color: currentColor;
+}
+h1{
+    color: currentColor;
+}
+.taile{
+    color: currentColor;
+    /* margin: 10px;
+    background-color: #757373; */
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.border-right{
+    border-right: 0.2em solid indigo;
+}
+.border-bottom{
+    border-bottom: 0.2em solid indigo;
+}
+
+
+.strike{
+    position: absolute;
+    background-color: tomato;
+}
+.strike-row-1{
+    width: 100%;
+    height: 4px;
+    top: 15%;
+}
+.strike-row-2{
+    width: 100%;
+    height: 4px;
+    top: 48%;
+}
+.strike-row-3{
+    width: 100%;
+    height: 4px;
+    top: 83%;
+}
+.strike-col-1{
+    height: 100%;
+    width: 4px;
+    left: 15%;
+}
+.strike-col-2{
+    height: 100%;
+    width: 4px;
+    left: 48%;
+}
+.strike-col-3{
+    height: 100%;
+    width: 4px;
+    left: 83%;
+}
+
+.strike-diagonal-1{
+    height: 4px;
+    width: 90%;
+    transform: scaleY(45deg);
+    left: 43%;
+    top: 50%;
+    left: 5%;
+    transform: skewY(45deg);
+}
+.strike-diagonal-2{
+    height: 4px;
+    width: 90%;
+    transform: scaleY(45deg);
+    left: 43%;
+    top: 50%;
+    left: 5%;
+    transform: skewY(-45deg);
+}
+#game-over{
+    margin-top: 20px;
+    border: indigo solid 4px;
+    padding: 50px;
+    width: 10%;
+    text-align: center;
+}
+h2{
+    color: currentColor;
+    font-size: 3rem;
+}
+button{
+    background-color: transparent;
+    color: currentColor;
+    border: 1px solid currentColor;
+    padding: 10px;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    font-size: 1.5em;
+    border-radius: 10%;
+}
+button:hover{
+    background-color: gold;
+    color: indigo;
+}
+
+.hidden{
+    display: none;
+
+}
+.show{
+    display: block;
+}
+
+.x-hover:hover::after{
+    content: 'X';
+}
+.o-hover:hover::after{
+    content: 'O';
+}
